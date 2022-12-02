@@ -14,9 +14,8 @@ function useTimer({ initStart = false, initLimit }: Timer) {
         setStart(initStart);
   }, [initLimit, initStart]);
 
-  const startTimer = useCallback((timeLimit?:number) => {
+  const startTimer = useCallback(() => {
     setStart(true);
-    timeLimit && setTime(timeLimit);
   }, []);
 
   const stopTimer = useCallback(() => {
