@@ -51,23 +51,23 @@ function useGame({ initBets, initWalletAmount, initStatus }: GameBoard) {
     return () => {
       clearTimeout(timeout);
     };
-  }, [time, status, bets]);
+  }, [time, status, bets, winner]);
 
   const resetGame = useCallback(() => {
     setBets(initBets);
     setStatus(initStatus);
     setWinner(undefined);
     resetTimer();
-  }, [initBets, initWalletAmount, initStatus]);
+  }, [initBets, initStatus, resetTimer]);
 
   const onPlay = useCallback(() => {
     if (!wallet) {
-        alert('No funds');
-        return;
-    };
+      alert("No funds");
+      return;
+    }
     setStatus(Game.BETTING);
     startTimer();
-  }, []);
+  }, [wallet, startTimer]);
 
   const getGameStats = useCallback((): GameStats | null => {
     if (bets && winner) {

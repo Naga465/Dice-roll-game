@@ -34,7 +34,7 @@
 main {
   height: 100%;
 }
-main>div {
+main > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,6 +45,8 @@ main>div {
   display: flex;
   gap: 30px;
   height: max-content;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .dice {
@@ -81,17 +83,6 @@ main>div {
 .dice > div span {
   flex-shrink: 0;
   flex-grow: 1;
-}
-
-.dice input[type="text"] {
-  border: none;
-  outline: none;
-  padding: 3px;
-  width: 100%;
-  border-radius: 15px;
-  font-size: 1rem;
-  background-color: black;
-  text-align: center;
 }
 
 /* Start Game */
@@ -158,7 +149,7 @@ main>div {
   color: #ffffff;
   padding-left: 20px;
 }
-.stats > div { 
+.stats > div {
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -180,10 +171,9 @@ main>div {
   opacity: 0.8;
 }
 
-
 @media (max-width: 600px) {
-  .gameboard {
-    /* padding: 1rem; */
+  .game-start h2 {
+    font-size: 4rem;
   }
   .gameboard .app-bar {
     padding: 0;

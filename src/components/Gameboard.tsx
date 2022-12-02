@@ -12,12 +12,12 @@ import {
 } from "../services/game";
 
 export const DicePositionColors: { [key in DiceNums]: string } = {
-  ["1"]: "#f77a0b",
-  ["2"]: "#2a8dfe",
-  ["3"]: "#fe2a62",
-  ["4"]: "#2afeac",
-  ["5"]: "#d7fe2a",
-  ["6"]: "#fe772a",
+  "1": "#f77a0b",
+  "2": "#2a8dfe",
+  "3": "#fe2a62",
+  "4": "#2afeac",
+  "5": "#d7fe2a",
+  "6": "#fe772a",
 };
 
 const Gameboard: FC<{}> = () => {
@@ -30,7 +30,7 @@ const Gameboard: FC<{}> = () => {
     setBets,
     onPlay,
     getGameStats,
-    resetGame
+    resetGame,
   } = useGame({
     initBets: null,
     initWalletAmount: WALLET_AMOUNT,
@@ -94,6 +94,7 @@ const Gameboard: FC<{}> = () => {
                         <p>{diceNumber}</p>
                         <div>
                           <img
+                            alt="minus"
                             onClick={updateBet(diceNumber, BetAmount.DECREMENT)}
                             src="/icons/minus.png"
                           />
@@ -101,6 +102,7 @@ const Gameboard: FC<{}> = () => {
                             !!bets?.[diceNumber] ? bets[diceNumber] : 0
                           }`}</span>
                           <img
+                            alt="plus"
                             onClick={updateBet(diceNumber, BetAmount.INCREMENT)}
                             src="/icons/plus.png"
                           />
