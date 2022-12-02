@@ -59,8 +59,8 @@ main div {
   background-color: rgb(33 37 45);
 }
 
-.dice-disable { 
-   opacity: 0.5;
+.dice-disable {
+  opacity: 0.5;
 }
 .dice p {
   margin: 0;
@@ -68,17 +68,17 @@ main div {
   font-weight: 600;
   margin-bottom: 10px;
 }
-.dice > div { 
+.dice > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
 }
-.dice > div img { 
-   width: 24px;
-   cursor: pointer;
+.dice > div img {
+  width: 24px;
+  cursor: pointer;
 }
-.dice > div span { 
+.dice > div span {
   flex-shrink: 0;
   flex-grow: 1;
 }
@@ -115,18 +115,16 @@ main div {
 .bet h2 {
   font-size: 3rem;
   margin: 0;
-  color :rgb(137, 13, 13);
+  color: rgb(137, 13, 13);
 }
-.bet h2 span { 
+.bet h2 span {
   color: #ffffff;
   font-size: 2.5rem;
 }
-.bet .status { 
-   font-size: 1rem;
-   font-weight: 600;
-   letter-spacing: 0.15rem;
+.bet .status {
+  font-size: 1rem;
+  font-weight: 600;
 }
-
 
 /* Play Button */
 
@@ -145,7 +143,7 @@ main div {
 
 /* Winner */
 
-.winner { 
+.winner {
   display: flex;
   flex-direction: column;
   height: max-content;
@@ -153,24 +151,25 @@ main div {
 
 /* STATS */
 
-.stats{
+.stats {
   display: flex;
   flex-direction: column;
+  align-items: baseline;
   font-size: 2.5rem;
   gap: 20px;
 }
-.stats h3 { 
+.stats h3 {
   margin: 0;
 }
-.stats .won { 
+.stats .won {
   color: #2a8dfe;
 }
-.stats .lost { 
+.stats .lost {
   color: rgb(137, 13, 13);
 }
-.stats span { 
-   color: #ffffff;
-   padding-left: 20px;
+.stats span {
+  color: #ffffff;
+  padding-left: 20px;
 }
 
 @media (max-width: 600px) {

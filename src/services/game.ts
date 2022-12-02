@@ -41,7 +41,7 @@ export const getWinnerStats = (bets: Bet | null, wonPosition: number | undefined
         won: 0,
         lost: 0
     }
-    const won = bets[wonPosition] * 2;
+    let won = bets[wonPosition] ? bets[wonPosition] * 2 : 0;
     let lost = 0;
     Object.keys(bets).forEach((position) => {
         if (position !== `${wonPosition}`) {
