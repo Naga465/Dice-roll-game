@@ -34,7 +34,7 @@
 main {
   height: 100%;
 }
-main div {
+main>div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,6 +98,7 @@ main div {
 .game-start {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 .game-start h2 {
@@ -110,6 +111,7 @@ main div {
 .bet {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 .bet h2 {
@@ -124,21 +126,6 @@ main div {
 .bet .status {
   font-size: 1rem;
   font-weight: 600;
-}
-
-/* Play Button */
-
-.play {
-  padding: 15px;
-  cursor: pointer;
-  color: #ffffff;
-  background-color: rgb(137, 13, 13);
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.play:hover {
-  opacity: 0.8;
 }
 
 /* Winner */
@@ -171,6 +158,28 @@ main div {
   color: #ffffff;
   padding-left: 20px;
 }
+.stats > div { 
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Play Button */
+
+.play {
+  padding: 15px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: rgb(137, 13, 13);
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 50%;
+}
+.play:hover {
+  opacity: 0.8;
+}
+
 
 @media (max-width: 600px) {
   .gameboard {

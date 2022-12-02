@@ -30,6 +30,7 @@ const Gameboard: FC<{}> = () => {
     setBets,
     onPlay,
     getGameStats,
+    resetGame
   } = useGame({
     initBets: null,
     initWalletAmount: WALLET_AMOUNT,
@@ -129,6 +130,9 @@ const Gameboard: FC<{}> = () => {
                 {`Lost:`}{" "}
                 <span>{formatCurrency(getGameStats()?.lost || 0)}</span>{" "}
               </h3>
+              <div style={{ width: "100%" }}>
+                <PlayButton onClick={resetGame}>Play Again</PlayButton>
+              </div>
             </div>
           </Board>
         </div>
